@@ -1,1 +1,3 @@
-# IWP_WebDev
+# IWP_WebDev 💻
+
+## A collection of my web development mini projects 😁🔥
