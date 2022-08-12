@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+    <style>
+        input[type=text]
+        {
+            height:25px;
+            width:300px;
+            padding:10px;
+        }
+        input:focus:valid
+        {
+            border:5px solid green;
+            background-color: antiquewhite;
+            background-image: url('images/Anya_Smile.png');
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+        input:focus:invalid
+        {
+            outline:none;
+            border:2px solid red;
+            background-image: url('images/Gojou.jpg');
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+    </style>
+
+</head>
+<body>
+    <form name="form1" action="#" autocomplete="off">
+        <fieldset>
+            <legend>User Defined</legend>
+        <label>Name</label>
+        
+        <input type="text" name="name" placeholder="Enter name here" autofocus> 
+        <br><br><br>
+        <input type = "password" name="pass" placeholder="Enter password here" pattern="[A-Za-z]{4,}">
+        </fieldset>
+        <br><br><br>
+
+        <input type="checkbox" name="tm" value="tm">Tamil
+        <input type="checkbox" name="en" value="en" checked>English
+        <input type="checkbox" name="hin" value="hin">Hindi
+
+        <br><br><br>
+
+        <input type="radio" name="gender" value="m">Male
+        <input type="radio" name="gender" value="f">Female
+        <input type="radio" name="gender" value="o">Other
+        
+        <br><br><br>
+        
+        <select name="state">
+            <option value="default">Select</option>
+            <option value="tn">Tamil Nadu</option>
+            <option value="kl">Karnataka</option>
+            <option value="mh">Maharashtra</option>
+        </select>
+
+        <br><br><br>
+
+        <select name="cars" multiple>
+            <option value="audi">Audi</option>
+            <option value="merc" selected="true" >Mercedes</option>
+            <option value="jag">Jaguar</option>
+            <option value="mh">Maharashtra</option>
+        </select>
+
+        <br><br><br>
+
+        <textarea name="comments" rows="10" cols="30">      </textarea>
+
+        <br><br><br>
+
+        <input type="button" name="b1" value="Button"> 
+        <br><br>
+        <input type="submit" name="submit" value="Submit"> 
+        <br><br>
+        <input type="reset" name="reset" value="Reset"> 
+
+    </form>
+    
+</body>
+</html>
