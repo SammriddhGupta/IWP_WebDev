@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    background-color: rgb(243, 243, 179) ;
+  }
+
+h1{
+    padding-left: 210px;
+    color: rgb(2, 81, 2);
+    text-decoration: underline;
+    font-variant: small-caps;
+}
+
+p,h3,span,b{
+    color:rgb(31, 95, 31);
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+    text-align:justify;
+}
+
+span{
+    margin:10px;
+    background-color:rgb(243, 243, 179) ;
+    display:block;
+    text-align: left;
+}
+
+.globeimg{
+    float:right;
+    margin: 10px;
+    border-radius: 50%;
+    overflow: auto;
+}
+
+.column {
+    float: left;
+    width: 33%;
+    padding: 0 20px;
+}
+
+.row {margin: 0 -2px;}
+
+.row:after {
+    content: "";
+    display: block;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgb(247, 241, 241);
+    border: 2px solid green;
+    border-radius: 5%;
+    height:400px;
+    box-sizing: border-box;
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+#card-img{
+    border-radius:40%;
+}
+
+.web-card{
+    margin-left:40px;
+    margin-top: 400px;
+    width:550px;
+    box-sizing: border-box;
+    border-radius: 3%;
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+
+}
+
+.row-new {margin: 0 -2px;}
+
+.row-new:after {
+    content: "";
+    display: block;
+}
+
+.column-new {
+    float: right;
+    width: 33%;
+    padding: 0 5px;
+}
+
+.card-new{
+    box-shadow: 0 4px 8px 0 rgb(247, 241, 241);
+    border: 2px solid green;
+    border-radius: 35% 0% 35% 0%;
+    height:200px;
+    box-sizing: border-box;
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+}
+
+.a{
+    margin-top: 20px;;
+}
+
+.card-foot{
+    border:0px;
+    background-color: green;
+    height:200px;
+    box-sizing: border-box;
+    padding: 16px;
+    text-align: center;
+}
+
+#tfoot{
+    padding-top: 20px;;
+    color:white;
+    background-color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
