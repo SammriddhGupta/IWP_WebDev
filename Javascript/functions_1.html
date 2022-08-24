@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Functions</title>
+</head>
+
+<body>
+    <h1 id="h1">From HTML</h1>
+    <h2 id="h2">From Javascript</h2>
+    <h3 id="h3"></h3>
+    <h4 id="h3"></h4>
+    <h5 id="h3"></h5>
+    <h6 id="h3"></h6>
+    <h7 id="h3"></h7>
+    <script>
+            function hello()
+            {
+                document.write("Hello");
+            }
+            document.getElementById('h2').innerHTML = "Hello";
+    
+    
+            function add(a,b)
+            {
+                c=a+b;
+                return c;
+            }
+            document.getElementById('h2').innerHTML = "Addition is "+add(15,5);
+
+            const x = function(a,b)
+            (return a*b);
+            document.getElementById('h3').innerHTML=("Multiplication is "+ x(5,5));
+            
+            function()
+            {
+                document.getElementById('h4').innerHTML=("Division is "+(10/2));
+            }
+
+            function sumitup()
+            {
+                for(int i=0;i<arguments.length;i++)
+                {
+                    sum+=arguments[i];
+                }
+                return sum;
+            }
+            document.getElementById('h6').innerHTML=sumitup(2,3,4,5,6,8);
+
+            function makeFunc()
+            {
+                const name="Mozilla";
+                function displayName()
+                {
+                    console.log(name)
+                }
+                return displayName;
+            }
+
+    </script>
+
+    <input type="button" onclick="hello()" value = "Click Me">
+    
+</body>
+</html>
