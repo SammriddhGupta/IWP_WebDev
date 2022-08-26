@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">From HTML</h1>
+    <h1 id="h2">From Javascript</h1>
+    <h1 id="h3"></h1>
+    <h1 id="h4"></h1>
+    <h1 id="h5"></h1>
+    <h1 id="h6"></h1>
+    <h1 id="h7"></h1>
+    <h1 id="h8"></h1>
+    <h1 id="h9"></h1>
+    <h1 id="h14"></h1>
+    <h1 id="h15"></h1>
+    <h1 id="h16"></h1>
+    <script>
+        cars = ["Audi", "Jaguar", "Volvo", "Ferrari"]
+        document.getElementById("h1").innerHTML = cars;
+        document.getElementById("h2").innerHTML = cars,join("#");
+        a="";
+        for(x in cars)
+        {
+            a+=cars[x]+"<br>";
+        }
+        document.getElementById("h3").innerHTML = a;
+
+        cars.pop();
+        cars.push("Bentley")
+
+        document.getElementById("h4").innerHTML = cars;
+        cars.splice(2,0,"Maruti","Toyota","Nissan");
+
+        document.getElementById("h5").innerHTML = cars;
+
+        cars.sort();
+
+        arr=[1,5,2,10,60,3,100,2000,500];
+
+        document.getElementById("h7").innerHTML=arr.sort(function(a,b){return a-b});
+
+        arr1 = [["abc",23],["def",45],["ghi",67]];
+
+        document.getElementById("h8").innerHTML=arr1.sort(function(a,b){return a[1]-b[1]});
+
+        //Using reverse function in array 
+        document.getElementById("h9").innerHTML=cars.reverse();
+
+        student = {fname:"abc", iname:"asas", age:23};
+
+        document.getElementById("h10").innerHTML=student["fname"];
+
+        document.getElementById("h11").innerHTML=student.iname;
+
+        str = "Welcome Everyone";
+        document.getElementById("h12").innerHTML=str.length;
+
+        document.getElementById("h13").innerHTML=str.search("very");
+
+        document.getElementById("h14").innerHTML=str.substring(4,8); // can also do substring(4)
+
+        document.getElementById("h15").innerHTML=str.split(" ");
+        document.getElementById("h16").innerHTML=str.split("");
+
+        document.getElementById("h17").innerHTML=str.split("").reverse().join("");
+
+        /*  Empty string - str isEmpty() 
+            To trim leading and ending spaces - str trim() 
+            convert lower and upper case - toUpperCase() and toLowerCase()
+            finding char at a position - charAt() 
+            Math.sqrt, Math.round, Math.floor, Math.ceil, Math.random */ 
+
+        d = new Date();
+        document.getElementById("h18").innerHTML=d.getHours();
+
+        document.getElementById("h19").innerHTML=Math.PI;
+
+        document.getElementById("h20").innerHTML=Math.random();
+
+        document.getElementById("h21").innerHTML=Math.round(Math.random()*11)+1;
+
+        document.getElementById("h22").innerHTML=document.lastModified;
+
+        document.getElementById("h23").innerHTML=document.lastModified;
+
+        document.getElementById("h24").innerHTML=document.lastModified;
+
+        document.getElementById("h25").innerHTML=document.lastModified;
+
+        //math.ceil function - rounds up to the next highest integer
+        document.getElementById("h26").innerHTML=Math.ceil(Math.random()*11)+1;
+
+        //math.floor function - rounds down to the next lowest integer
+        document.getElementById("h27").innerHTML=Math.floor(Math.random()*11)+1;
+
+        //math.round function - rounds to the nearest integer
+        document.getElementById("h28").innerHTML=Math.round(Math.random()*11)+1;
+
+        //math.sqrt function - returns the square root of a number
+        document.getElementById("h29").innerHTML=Math.sqrt(Math.random()*11)+1;
+
+        //math.pow function - returns the value of a number raised to the power of another number
+        document.getElementById("h30").innerHTML=Math.pow(Math.random()*11)+1;
+
+        //math.abs function - returns the absolute value of a number
+        document.getElementById("h31").innerHTML=Math.abs(Math.random()*11)+1;
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>
