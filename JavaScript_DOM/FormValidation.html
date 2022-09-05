@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM - Form Validation</title>
+</head>
+<body>
+
+    <p id="p1" style="font-weight:bold;">this is a paragraph <br> random text <br> click this para to see some magic</p>
+
+    <p id="p2"> this is the 2nd para -- Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eius incidunt voluptatibus quia obcaecati distinctio autem voluptatem deleniti quis! Delectus deleniti minima illo, dolores nisi laborum repellat quisquam laboriosam necessitatibus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores in voluptatem iste sunt itaque, eligendi nobis repudiandae voluptatum! Tenetur similique eaque dicta obcaecati alias blanditiis excepturi corporis unde odio quam!</p>
+
+    <h1 class="intro">Heading-1 =>important stuff</h1>
+    <h1>Heading-2 ~> the not so important stuff</h1>
+    <div id="d1"></div>
+    <br><br>
+
+    <img src="Gojou1.jpg" id="img1" alt="" onmouseover="img()" height="250px">
+
+    <br><br>
+
+    <form action="" name="regForm" onsubmit="return validation()">
+        <br>
+        <label for="text"> Enter these details asked below: </label>
+        <br><br>
+        <input type="text" name="name" placeholder="enter name"> <br><br>
+        <input type="text" name="age" placeholder="enter age">
+        <br><br>
+        <p id="f"></p>
+        <input type="submit" name="submit" id="submit "value="submit">
+        <br><br>
+    </form>
+        
+    <script>
+        document.getElementById("p1").onclick = change;
+        
+        function change()
+            {
+                document.getElementById("p1").innerHTML = "SURPRISE this is a div <br> Also try hovering over the picture to see some awesomeness";
+            }
+        
+        var a = document.getElementsByTagName("p");
+        var a1 = document.getElementsByClass(".intro");
+        document.write(a);
+        document.write(a[1].innerHTML);
+        document.write(a1[0].innerHTML);
+
+        function img(){
+            var b = document.getElementById("img1");
+            b.src="Gojou2.jpg";
+        }
+
+        var c = document.querySelector("p");
+        var c = document.querySelectorAll(".intro");
+        var c = document.querySelector("#p1");
+        document.write(c[1].innerHTML);
+
+        var d = document.quertSelectorAll("p.intro");
+
+        function validation()
+        {
+            var name = document.regForm.name.value;
+            var age = document.regForm.age.value;
+            var alpha = /^[A-Za-z]+$/;
+            var num = /^[0-9]{1,2}$/;
+
+            if(name.length == 0)
+            {
+                alert("Enter the name");
+                name.focus();
+                return false;
+            }
+            else if(!name.match(alpha))
+            {
+                alert("Enter alphabets only");
+                name.focus();
+                return false;
+            }
+            else if(!age.match(num))
+            {
+                alert("Enter numbers only");
+                age.focus();
+                /*var f = document.getElementById("f");
+                f.innerHTML = "Enter a number";
+                f.style.color="red"*/
+                return false;
+            }
+            else
+                return true;
+        }
+
+        function toUpperCase(){
+            var x = document.reg.name;
+            x.value = x.value.toUpperCase();
+        }
+
+        document.reg.name.addEventListener("keyup", toUpperCase);
+
+        var ntxt = document.createElement("input");
+        ntxt.setAttribute("type", "password");
+        document.reg.appendChild(ntxt);
+
+
+        var para = document.createElement("p");
+        var txt = document.createElement("New from JS");
+        para.appendChild(txt);
+
+    </script>
+   
+</body>
+</html>
